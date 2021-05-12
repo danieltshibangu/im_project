@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='title.css') }}" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="animated-title">
+        <div class="text-top">
+          <div>
+            <span>mimicking</span>
+            <span>apple's design</span>
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div>for the win!</div>
+        </div>
+      </div>
+</body>
+
+<script>
+    setTimeout(function() {
+        window.location.href="templates/index.html";
+    }, 5000);
+</script>
+</html>

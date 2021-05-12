@@ -1,0 +1,244 @@
+body {
+  background: linear-gradient( -45deg, #f66, #f55, #f77, #f77);
+  background-size: 800% 800%;
+  animation: gradient 15s ease infinite;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin:0;
+  padding:0;
+  font-family: Hack, monospace;
+  opacity:1;
+  transition-duration:10s;
+  transition-property: opacity;
+}
+
+body.fade {
+  opacity: 0;
+}
+
+html, body {
+  height:100%;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* creating the header */
+header {
+  width: 100%;
+  height: 6em;
+}
+
+/*
+.nav-menu {
+  list-style: none;
+  display:flex;
+  overflow:hidden;
+}
+
+.nav-menu li {
+  margin:50px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 30px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position:relative;
+  text-transform: uppercase;
+  font-family: Hack, monospace;
+}
+*/
+
+
+section {
+  height:100%
+}
+
+/* Creating the highlighted movie profile */
+.selected-show {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: BLACK;
+  border: 1px solid black;
+  position: relative;
+  backdrop-filter: blur(5px);
+
+  /* centers the circle to the middle */
+  display: block;
+  margin-left: 50px;
+  margin-right: auto;
+  z-index:5;
+
+  top:30%;
+}
+
+.movie-img-bubble {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 6%;
+
+
+  border-radius: 50%;
+  height: 87%;
+  width: 87%;
+
+  background-color: white;
+}
+
+#wave-box-one {
+  transform: rotate(80deg); 
+  margin-left: -150px;
+  margin-top: -250px;
+
+}
+
+.wave {
+  position: fixed;
+  opacity: .4;
+  width: 1500px;
+  height: 1300px;
+  border-radius: 43%;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.wave.-one {
+  animation: rotate 7000ms infinite linear;
+  opacity: .1;
+  background: #0af;
+}
+
+.wave.-two {
+  animation: rotate 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+}
+
+.wave.-three {
+  animation: rotate 7500ms infinite linear;
+  background-color: #77daff;
+}
+
+#wave-box-two {
+  transform: rotate(80deg); 
+  height:100%;
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+#wave-box-two .wave {
+  position: fixed;
+  opacity: .4;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.text-screen {
+  position:relative;
+ margin-left:25%;
+
+}
+
+
+.holder{
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  display: flex;
+  height: 730px;
+  overflow: hidden;
+  position: relative;
+  margin-right:90px;
+  width: 1050px;
+}
+
+.holder:before {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(70%);
+  content:'';
+  height: 100%;
+  position: absolute;
+  width:100%;
+}
+
+.text {
+  color:#6f7886;
+  margin-left:30px;
+  margin-top:100px;
+  position:relative;
+  z-index: 99;
+}
+
+.text-form {
+  position: absolute;
+  margin-top:500px;
+  height: 500px;
+  width: 500px;
+  margin-left:px;
+  background: transparent;
+  border: none;
+}
+
+.input-form {
+  background: transparent;
+  border-style: none;
+  outline: none;
+}
+
+#text-view {
+  position:relative;
+  margin-left:25%;
+}
+
+#text-view-under {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 1rem 0 rgba(29, 27, 27, 0.048);
+  font-size: 2rem;
+  display: flex;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  margin-top: -50px;
+  margin-left:-180px;
+  width: 950px;
+}
+
+#text-view-under:before {
+  background-color: rgba(110, 104, 104, 0.274);
+  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(70%);
+  content:'';
+  height: 100%;
+  position: absolute;
+  width:100%;
+
+}
+
+#color-content {
+  color:#384962;
+  margin-left:30px;
+  margin-top:10px;
+  position:relative;
+  z-index: 5;
+}
