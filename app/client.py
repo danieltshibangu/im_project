@@ -5,13 +5,14 @@ HEADER = 16
 PORT = 5050
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = '!DISCONNECT'
-SERVER = '10.0.0.222'
+SERVER = 'localhost'
 ADDR = (SERVER, PORT)
 OK_FEEDBACK = 'text recieved'
 
 # setting up socket for client 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 # connect to server, instead of bind
+
 client.connect(ADDR)
 
 # ------- tested here-----------
@@ -29,6 +30,8 @@ connection successful and active when run
 # method for sending messages to server
 def send():
     
+    # connect to server, instead of bind
+
     # create nickname 
     nickname = input("Enter nickname: ")
     profile = nickname

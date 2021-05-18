@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='username.css') }}" />
+    <title>Login - Dialog v1.0</title>
+    <script>
+    function redirect() {
+        window.location.replace("/dialog");
+        return false;
+      }
+    </script>
+</head>
+<body>
+    <script>
+        document.body.classList.add('fade');
+      </script>
+  
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          window.setTimeout( function() {
+          document.body.classList.remove('fade');
+        }, 300);
+      });
+      </script>
+    <div class="rec-link"></div>
+
+    <div class="text-screen">
+      <div class="holder">
+        <div class="text">
+
+          <div id="text-view">
+              <div id="text-view-under">
+                <div id="color-content">
+
+                    <form id="name-form" onsubmit="return redirect();">
+                    <label type="text">Type in a name: </label>
+                        <input type="text" name="username" placeholder="Enter username" required>
+                    </form>
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+    
+</body>
+</html>

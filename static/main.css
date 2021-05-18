@@ -102,11 +102,12 @@ section {
 }
 
 .wave {
-  position: fixed;
+  position: relative;
   opacity: .4;
   width: 1500px;
   height: 1300px;
   border-radius: 43%;
+  z-index:1
 }
 
 @keyframes rotate {
@@ -137,6 +138,7 @@ section {
   position:absolute;
   bottom:0;
   right:0;
+  z-index:1;
 }
 
 #wave-box-two .wave {
@@ -168,9 +170,12 @@ section {
   display: flex;
   height: 730px;
   overflow: hidden;
-  position: relative;
   margin-right:90px;
   width: 1050px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .holder:before {
@@ -241,4 +246,20 @@ section {
   margin-top:10px;
   position:relative;
   z-index: 5;
+}
+
+#text-box {
+  overflow-y: scroll;
+  height: 400px;
+  width: 800px;
+  position: fixed;
+  display: inline-block;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  resize:none
+}
+
+.input-form {
+  font-size: 30px;
 }

@@ -46,13 +46,23 @@
 .animated-title > div.text-top div span:first-child {
   color: #767676;
 }
-.animated-title > div.text-bottom {
+.animated-title > div.text-bottom  {
   bottom: 0;
 }
-.animated-title > div.text-bottom div {
+.animated-title > div.text-bottom div{
   animation: showBottomText 0.5s;
   animation-delay: 1.75s;
   animation-fill-mode: forwards;
   top: 0;
   transform: translate(0, -100%);
+}
+
+#username {
+  border: none;
+  outline: none;
+}
+
+#username:empty:not(focus)::before {
+  content: attr(name-placeholder);
+  color: rgba(175, 172, 172, 0.993);
 }
